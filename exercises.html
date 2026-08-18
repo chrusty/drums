@@ -7,8 +7,15 @@ title: Exercises
 <ul>
     {% for exercise in site.exercises %}
     <li>
-        <h2><a href="{{site.baseurl}}{{ exercise.url }}">{{ exercise.name }}</a> ({{ exercise.type }})</h2>
-        <h3>Tags: [{% for tag in exercise.tags %}{{tag}},{% endfor %}]</h3>
+        <h2>
+            <a href="{{site.baseurl}}{{ exercise.url }}">
+                {{ exercise.name }}
+            </a>
+            ({{ exercise.type }})
+            {% if exercise.tags.size > 0 %}
+            [{% for tag in exercise.tags %}{{tag}},{% endfor %}]
+            {% endif %}
+        </h2>
     </li>
     {% endfor %}
 </ul>
