@@ -1,0 +1,24 @@
+title: Drumset Exercises
+description: >- 
+  Drumset exercises with audio and notation
+baseurl: "/drums"
+url: "https://chrusty.github.io"
+github_username:  chrusty
+theme: minima
+plugins:
+  - jekyll-feed
+collections:
+  exercises:
+    output: true
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - drums

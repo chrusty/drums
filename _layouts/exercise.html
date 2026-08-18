@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body id="page-top">
+
+  <section class="bg-primary" id="about">
+    <div class="container">
+      <h1 class="major">{{ page.title }}</h1>
+      <table>
+        <tr>
+          <td>Type:</td>
+          <td>{{page.type}}</td>
+        </tr>
+        <tr>
+          <td>Source:</td>
+          <td>{{page.source}}</td>
+        </tr>
+        <tr>
+          <td>Time signature:</td>
+          <td>{{page.timesig}}</td>
+        </tr>
+        <tr>
+          <td>Tags:</td>
+          <td>{% for tag in page.tags %} {{tag }}{% endfor %}</td>
+        </tr>
+        <tr>
+          <td>Listen:</td>
+          <td><a href="{{page.link}}">GrooveScribe</a></td>
+        </tr>
+      </table>
+
+    </div>
+  </section>
+  <section id="content-wrapper" class="bg-secondary">
+    <div class="container">
+      <a href="{{page.link}}">
+        <img src="{{site.baseurl}}/assets/img/{{page.image}}" alt="Notation" width="50%">
+      </a>
+    </div>
+    </div>
+    <div class="container">
+      {{ content }}
+    </div>
+  </section>
+
+</body>
+
+</html>

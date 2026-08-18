@@ -1,0 +1,14 @@
+---
+layout: default
+title: Exercises
+---
+<h1>Exercises</h1>
+
+<ul>
+    {% for exercise in site.exercises %}
+    <li>
+        <h2><a href="{{site.baseurl}}{{ exercise.url }}">{{ exercise.name }}</a> ({{ exercise.type }})</h2>
+        <h3>Tags: [{% for tag in exercise.tags %}{{tag}},{% endfor %}]</h3>
+    </li>
+    {% endfor %}
+</ul>
