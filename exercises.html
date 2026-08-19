@@ -13,7 +13,7 @@ title: Exercises
             </a>
             ({{ exercise.type }})
             {% if exercise.tags.size > 0 %}
-            [{% for tag in exercise.tags %}{{tag}},{% endfor %}]
+            {% for tag in exercise.tags %}[{{tag}}] {% endfor %}
             {% endif %}
         </h2>
     </li>
