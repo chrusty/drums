@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Exercises
+layout: home
+# title: Exercises
 ---
 <h1>Exercises</h1>
 

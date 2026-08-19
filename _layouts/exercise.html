@@ -28,15 +28,16 @@
           <td><a href="{{page.link}}">GrooveScribe</a></td>
         </tr>
       </table>
-
     </div>
   </section>
   <section id="content-wrapper" class="bg-secondary">
-    <div class="container">
-      <a href="{{page.link}}">
-        <img src="{{site.baseurl}}/assets/img/{{page.image}}" alt="Notation" width="50%">
-      </a>
-    </div>
+    <a href="{{page.link}}">
+      {% for image in page.images %}
+      <div class="container">
+        <img src="{{site.baseurl}}/assets/img/{{image}}" alt="Notation" width="50%">
+      </div>
+      {% endfor %}
+    </a>
     </div>
     <div class="container">
       {{ content }}
